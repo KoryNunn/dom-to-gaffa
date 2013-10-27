@@ -5,15 +5,32 @@
     <script type="text/javascript" src="scripts/app.browser.js"></script>
 </head>
 <body g>
-    <container tagName="section">
-        <heading text-binding="[heading]"></heading>
+    <container tag-name="section">
+        <heading text_value="things"></heading>
         <form>
-            <actions>
 
+            <actions event="submit">
+                <conditional condition_binding="[/newItem/label]">
+                    <actions event="true">
+                        <push target_binding="[/items]" source_binding="[/newItem]"></push>
+                        <remove target_binding="[/newItem]"></remove>
+                    </actions>
+                </conditional>
             </actions>
-            <textbox value-binding="[heading]"></textbox>
-            <button>Add item</button>
+
+            <textbox value_binding="[/newItem/label]"></textbox>
+            <button sub-type_value="submit">Add item</button>
         </form>
+
+        <textbox value_binding="[/filter]" update-event-name="keyup"></textbox>
+
+        <list list_binding="(? [/filter] (filter [/items] {item (contains item.label [/filter])}) [/items])">
+            <container template-for="list">
+                <label text_binding="[label]"></label>
+                <textbox value_binding="[thing]"></textbox>
+            </container>
+        </list>
+
     </container>
 </body>
 </html>
