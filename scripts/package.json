@@ -1,14 +1,13 @@
 {
   "version": "0.0.1",
-  "name": "myapp",
-  "description": "My gaffa app",
-  "main": "app.js",
+  "name": "dom-to-gaffa",
+  "description": "Allows gaffa apps to be created from DOM",
+  "main": "dom-to-gaffa.js",
   "engines": {
     "node": ">=0.6"
   },
   "dependencies": {
-    "gaffa": "x.x.x",
-    "doc-js": "~0.3.1"
+    "gaffa": "x.x.x"
   },
   "dev-dependencies": {
     "browserifyer": "x.x.x"
