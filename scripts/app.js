@@ -4,8 +4,7 @@ var Gaffa = require('gaffa'),
     views = gaffa.views.constructors = require('./views'),
     actions = gaffa.actions.constructors = require('./actions'),
     behaviours = gaffa.behaviours.constructors = require('./behaviours'),
-    doc = require('doc-js'),
-    domToGaffa = require('./dom-to-gaffa');
+    domToGaffa = require('../dom-to-gaffa');
 
 myApp.gaffa = gaffa;
 

@@ -1,7 +1,8 @@
 {
   "version": "0.0.1",
-  "name": "test-app",
-  "main": "app.js",
+  "name": "dom-to-gaffa",
+  "description": "Allows gaffa apps to be created from DOM",
+  "main": "dom-to-gaffa.js",
   "engines": {
     "node": ">=0.6"
   },
