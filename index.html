@@ -3,6 +3,17 @@
     <head>
         <title></title>
         <script type="text/javascript" src="scripts/app.browser.js"></script>
+        <style type="text/css">
+        .itemsList{
+            border:solid 1px black;
+            padding:10px;
+        }
+
+        .item{
+            border:solid 1px black;
+            padding:10px;
+        }
+        </style>
     </head>
     <body>
         <container tag-name="section">
@@ -18,14 +29,14 @@
                     </conditional>
                 </actions>
 
-                <textbox value_binding="[/newItem/label]"></textbox>
+                <textbox value_binding="[/newItem/label]" placeholder_value="new item"></textbox>
                 <button sub-type_value="submit">Add item</button>
             </form>
 
-            <textbox value_binding="[/filter]" update-event-name="keyup"></textbox>
+            <textbox value_binding="[/filter]" update-event-name="keyup" placeholder_value="filter"></textbox>
 
-            <list list_binding="(? [/filter] (filter [/items] {item (contains item.label [/filter])}) [/items])">
-                <container template-for="list">
+            <list classes_value="itemsList" list_binding="(? [/filter] (filter [/items] {item (contains item.label [/filter])}) [/items])">
+                <container classes_value="itemsList" template-for="list">
                     <label text_binding="[label]"></label>
                     <textbox value_binding="[thing]"></textbox>
                 </container>
