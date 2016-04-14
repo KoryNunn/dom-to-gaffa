@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "dom-to-gaffa",
   "description": "Allows gaffa apps to be created from DOM",
   "main": "dom-to-gaffa.js",
